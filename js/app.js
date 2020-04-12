@@ -39,7 +39,7 @@ $(document).ready(function() {
     playVideos();
     if (side === 'jon') {
       vid1.volume = 1;
-      vid2.volume = 0.2;
+      vid2.volume = 0.3;
     } else {
       vid1.volume = 0.2;
       vid2.volume = 1;
