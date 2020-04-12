@@ -30,8 +30,8 @@ $(document).ready(function() {
 
   radioGroup.addEventListener('change', changeSide);
 
-  leftArea.addEventListener('change', changeSide);
-  rightArea.addEventListener('change', changeSide);
+  leftArea.addEventListener('click', changeSide);
+  rightArea.addEventListener('click', changeSide);
 
 
   $(".button").on('click',
