@@ -25,13 +25,24 @@ $(document).ready(function() {
     currentClass = showClass;
   }
 
+
+  function changeSideById(e) {
+    var side = e.target.getAttribute('id');
+    var showClass = 'show-' + side;
+    if (currentClass) {
+      cube.classList.remove(currentClass);
+    }
+    cube.classList.add(showClass);
+    currentClass = showClass;
+  }
+
   // set initial side
   changeSide();
 
   radioGroup.addEventListener('change', changeSide);
 
-  leftArea.addEventListener('click', changeSide);
-  rightArea.addEventListener('click', changeSide);
+  leftArea.addEventListener('click', changeSideById);
+  rightArea.addEventListener('click', changeSideById);
 
 
   $(".button").on('click',
@@ -48,6 +59,4 @@ $(document).ready(function() {
 vid1.onplaying = function() {
   $(scene).removeClass("dimmed")
 }
-
-
 });
