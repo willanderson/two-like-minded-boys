@@ -24,8 +24,8 @@ $(document).ready(function() {
 
   function stopVideos() {
     if (playing) {
-      vid1.stop();
-      vid2.stop();
+      vid1.pause();
+      vid2.pause();
       console.log("stopping videos")
     }
   }
