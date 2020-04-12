@@ -7,7 +7,7 @@ layout: default
     <div id="cubeHold" class="cube show-start">
       <div class="cube__face cube__face--front" value="jonathan">
         <h1 id="start" class="button">Play</h1>
-        <video poster="assets/static.gif" id="jon" width="100%" height="auto">
+        <video muted poster="assets/static.gif" id="jon" width="100%" height="auto">
           <source src="https://kenjiseth.s3.amazonaws.com/jonathan.mp4" type="video/mp4">
         </video>
       </div>
@@ -15,7 +15,7 @@ layout: default
       <div class="cube__face cube__face--right"></div>
       <div class="cube__face cube__face--left" value="seth">
         <h1 class="button">Play</h1>
-        <video poster="assets/static.gif" id="seth" loop  width="100%" height="100%">
+        <video muted poster="assets/static.gif" id="seth" loop  width="100%" height="100%">
           <source src="https://kenjiseth.s3.amazonaws.com/seth.mp4" type="video/mp4" />
         </video>
       </div>
@@ -48,11 +48,7 @@ layout: default
   var vid1 = document.getElementById('jon');
   var vid2 = document.getElementById('seth');
 
-  function playVideos() {
-    vid1.play();
-    vid2.play();
-    console.log("starting videos")
-  }
+
 
 
 </script> -->
