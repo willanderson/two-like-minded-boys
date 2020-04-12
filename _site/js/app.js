@@ -3,29 +3,54 @@ $(document).ready(function() {
 
   var vid1 = document.getElementById('jon');
   var vid2 = document.getElementById('seth');
-  var videos = [vid1, vid2]
 
+  var leftArea = document.querySelector('.left-area');
+  var rightArea = document.querySelector('.right-area');
   var cube = document.querySelector('.cube');
   var scene = document.querySelector('.scene');
-  var radioGroup = document.querySelector('.radio-group');
+  var reset = document.querySelector('#reset');
   var currentClass = '';
   var playing = false;
 
+  function playVideos() {
+    if (!playing) {
+      vid1.play();
+      vid2.play();
+    }
+  }
 
-  function changeSide() {
-    var checkedRadio = radioGroup.querySelector(':checked');
-    var showClass = 'show-' + checkedRadio.value;
+  function stopVideos() {
+    if (playing) {
+      vid1.pause();
+      vid2.pause();
+    }
+  }
+
+
+
+  function changeSideById(e) {
+    var side = e.target.getAttribute('id');
+    var showClass = 'show-' + side;
     if (currentClass) {
       cube.classList.remove(currentClass);
     }
     cube.classList.add(showClass);
     currentClass = showClass;
+    playVideos();
+    if (side === 'jon') {
+      vid1.volume = 1;
+      vid2.volume = 0.2;
+    } else {
+      vid1.volume = 0.2;
+      vid2.volume = 1;
 
+    }
   }
-  // set initial side
-  changeSide();
 
-  radioGroup.addEventListener('change', changeSide);
+
+
+  leftArea.addEventListener('click', changeSideById);
+  rightArea.addEventListener('click', changeSideById);
 
 
   $(".button").on('click',
@@ -40,8 +65,6 @@ $(document).ready(function() {
 
 
 vid1.onplaying = function() {
-  $(scene).removeClass("dimmed")
+  $(scene).addClass("bright")
 }
-
-
 });

@@ -14,17 +14,15 @@
   <div class="scene flex justify-center items-center dimmed">
     <div id="cubeHold" class="cube show-start">
       <div class="cube__face cube__face--front" value="jonathan">
-        <h1 id="start" class="button">Play</h1>
         <video poster="assets/static.gif" id="jon" width="100%" height="auto">
-          <source src="https://kenjiseth.s3.amazonaws.com/jonathan.mp4" type="video/mp4">
+          <source src="https://kenjiseth.s3.amazonaws.com/Jonathan.m4v" type="video/mp4">
         </video>
       </div>
       <div class="cube__face cube__face--back"></div>
       <div class="cube__face cube__face--right"></div>
       <div class="cube__face cube__face--left" value="seth">
-        <h1 class="button">Play</h1>
         <video poster="assets/static.gif" id="seth" loop  width="100%" height="100%">
-          <source src="https://kenjiseth.s3.amazonaws.com/seth.mp4" type="video/mp4" />
+          <source src="https://kenjiseth.s3.amazonaws.com/Seth.m4v" type="video/mp4" />
         </video>
       </div>
 
@@ -34,36 +32,7 @@
   </div>
   <div class="area left-area" id="seth"></div>
   <div class="area right-area" id="jon"></div>
-  <div class="radio-group w-100 center white pv3">
-    <label>
-      <input type="radio" name="rotate-cube-side" value="start" checked /> Start
-    </label>
-    <label>
-      <input onclick="playVideos()" type="radio" name="rotate-cube-side" value="seth" /> Seth
-    </label>
-    <label>
-      <input type="radio" name="rotate-cube-side" value="jonathan" /> Jonathan
-    </label>
-    <!-- <label>
-      <input type="radio" name="rotate-cube-side" value="top" /> Top
-    </label> -->
-  </div>
 </div>
-
-
-<script>
-
-  var vid1 = document.getElementById('jon');
-  var vid2 = document.getElementById('seth');
-
-  function playVideos() {
-    vid1.play();
-    vid2.play();
-    console.log("starting videos")
-  }
-
-
-</script>
 
 
   </body>
