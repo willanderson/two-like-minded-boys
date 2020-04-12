@@ -1,5 +1,5 @@
 body {
-  background-color: #f8f8f8;
+  background-color: #000;
   font-family: sans-serif;
 }
 
@@ -92,7 +92,7 @@ nav h1 {
 
 .cube {
   width: 75vw;
-  height: 75vh;
+  height: 75vw;
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(-100vw);
@@ -121,12 +121,12 @@ nav h1 {
 
 .cube__face--start  { transform: rotateY(  45deg) translateZ(-100vw); }
 .cube__face--seth  { transform: rotateY(  -90deg) translateZ(-100vw); }
-.cube__face--jonathan  { transform: rotateY(  -90deg) translateZ(25vw); }
+.cube__face--jonathan  { transform: rotateY(  -90deg) translateZ(-100vw); }
 
 .cube__face {
   position: absolute;
   width: 75vw;
-  height: 75vh;
+  height: 75vw;
   line-height: 200px;
   font-size: 40px;
   font-weight: bold;
