@@ -14,6 +14,18 @@ $(document).ready(function() {
   var currentClass = '';
   var playing = false;
 
+  function playVideos() {
+    if (!playing) {
+      vid1.play();
+      vid2.play();
+      console.log("starting videos")
+    } else {
+      vid1.stop();
+      vid2.stop();
+      console.log("stopping videos")
+    }
+  }
+
 
   function changeSide() {
     var checkedRadio = radioGroup.querySelector(':checked');
@@ -34,6 +46,8 @@ $(document).ready(function() {
     }
     cube.classList.add(showClass);
     currentClass = showClass;
+
+    playVideos();
   }
 
   // set initial side
