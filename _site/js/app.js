@@ -4,6 +4,10 @@ $(document).ready(function() {
   var vid1 = document.getElementById('jon');
   var vid2 = document.getElementById('seth');
 
+  enableInlineVideo(vid1);
+  enableInlineVideo(vid2);
+
+
   var leftArea = document.querySelector('.left-area');
   var rightArea = document.querySelector('.right-area');
   var cube = document.querySelector('.cube');
