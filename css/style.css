@@ -96,17 +96,10 @@ nav h1 {
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(-100vw);
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
-.dimmed {
-  opacity: .2;
-  transition: all 1s;
-}
 
-.bright {
-  opacity: 1;
-}
 
 .cube.show-front  { transform: translateZ(-100vw) rotateY(   45deg); opacity: 1; }
 .cube.show-right  { transform: translateZ(-100vw) rotateY( -90deg); }
