@@ -19,13 +19,16 @@ $(document).ready(function() {
       vid1.play();
       vid2.play();
       console.log("starting videos")
-    } else {
+    }
+  }
+
+  function stopVideos() {
+    if (playing) {
       vid1.stop();
       vid2.stop();
       console.log("stopping videos")
     }
   }
-
 
   function changeSide() {
     var checkedRadio = radioGroup.querySelector(':checked');
