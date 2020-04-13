@@ -11,39 +11,43 @@
 </head>
   <body>
 
-    <!-- <div class="bg-black ph2-l ph0">
+    <div class="bg-black ph2-l ph0">
   <div class="w-100 flex flex-wrap">
     <div id="left" class="w-50-l vh-calc-l w-100 vh-100-l vh-75 relative overflow-hidden ph2-l ph0 flex items-center ease-transition ">
-      <video id="leftVideo" class="object-fit pointer skew" autostart autoplay loop preload muted width="100%" height="auto">
-        <source src="http://media.gayboystube.com:8080/videos/5/e/8/f/b/5e8fb294612c8.mp4" type="video/mp4">
+      <video id="leftVideo" class="object-fit pointer skew" autostart autoplay loop preload width="100%" height="auto">
+        <source src="https://kenjiseth.s3.amazonaws.com/Jonathan.mov"" type="video/mp4">
       </video>
     </div>
 
     <div id="right" class="w-50-l vh-calc-l w-100 vh-100-l vh-75 relative overflow-hidden ph2-l ph0 flex items-center ease-transition">
-      <video id="rightVideo" class="object-fit pointer skew" autostart autoplay loop preload muted width="100%" height="auto">
-        <source src="http://media.gayboystube.com:8080/videos/5/e/8/7/4/5e874141d584e.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</div> -->
-
-<div class="bg-black ph2-l ph0">
-  <div class="w-100 flex flex-wrap">
-    <div id="left" class="w-50-l vh-calc-l w-100 vh-100-l vh-75 relative overflow-hidden ph2-l ph0 flex items-center ease-transition ">
-      <video id="leftVideo" class="object-fit pointer skew" autostart autoplay loop preload muted width="100%" height="auto">
-        <source src="http://media.gayboystube.com:8080/videos/5/e/8/7/4/5e874141d584e.mp4"" type="video/mp4">
-      </video>
-    </div>
-
-    <div id="right" class="w-50-l vh-calc-l w-100 vh-100-l vh-75 relative overflow-hidden ph2-l ph0 flex items-center ease-transition">
-      <video id="rightVideo" class="object-fit pointer skew" autostart autoplay loop preload muted width="100%" height="auto">
-        <source src="assets/seth.mp4" type="video/mp4">
+      <video id="rightVideo" class="object-fit pointer skew" autostart autoplay loop preload width="100%" height="auto">
+        <source src="https://kenjiseth.s3.amazonaws.com/Seth.mov"" type="video/mp4">
       </video>
     </div>
   </div>
 </div>
 
 <div class="vh-25 w-100 bg-black"></div>
+
+<script>
+  var vid1 = document.getElementById('leftVideo');
+  var vid2 = document.getElementById('rightVideo');
+  var clickArea = document.querySelector('.bg-black');
+  var playing = false
+
+  function playVideos() {
+    if (!playing) {
+      vid1.play();
+      vid2.play();
+      playing = true
+    } else {
+      vid1.pause();
+      vid2.pause();
+      playing = false
+    }
+  }
+  clickArea.addEventListener('click', playVideos);
+</script>
 
 
   </body>
