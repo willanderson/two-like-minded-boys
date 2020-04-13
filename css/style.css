@@ -112,9 +112,11 @@ nav h1 {
 .cube.show-seth {transform: translateZ(-100vw) rotateY(   90deg);}
 .cube.show-jon {transform: translateZ(-100vw) rotateY(   0deg);}
 
+
 .cube__face--start  { transform: rotateY(  45deg) translateZ(-100vw); }
 .cube__face--seth  { transform: rotateY(  -90deg) translateZ(-100vw); }
 .cube__face--jonathan  { transform: rotateY(  -90deg) translateZ(-100vw); }
+
 
 .cube__face {
   position: absolute;
