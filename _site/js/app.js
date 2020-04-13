@@ -51,24 +51,19 @@ $(document).ready(function() {
     }
   }
 
-
-
   leftArea.addEventListener('click', changeSideById);
   rightArea.addEventListener('click', changeSideById);
 
-
-  $(".button").on('click',
-    (function() {
-      $(this).html($(this).html() == 'Play' ? ' Pause ' : 'Play');
-      playVideos();
-      $(scene).toggleClass('bright');
-
-    })
-  );
+  vid1.addEventListener("ended", resetVid);
+  vid2.addEventListener("ended", resetVid);
 
 
+  function resetVid() {
+    $( "#cubeHold" ).removeClass( "show-jon show-seth" )
+    vid1.load();
+    vid2.load();
+  }
 
-vid1.onplaying = function() {
-  $(scene).addClass("bright")
-}
+
+
 });
