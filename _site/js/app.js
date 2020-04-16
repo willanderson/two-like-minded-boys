@@ -4,8 +4,9 @@ $(document).ready(function() {
   var vid1 = document.getElementById('jon');
   var vid2 = document.getElementById('seth');
 
-  enableInlineVideo(vid1);
-  enableInlineVideo(vid2);
+  $('video').each(function () {
+  	enableInlineVideo(this);
+  })
 
 
   var leftArea = document.querySelector('.left-area');
