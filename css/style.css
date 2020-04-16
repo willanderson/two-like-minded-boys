@@ -230,3 +230,33 @@ label { margin-right: 10px; }
      pointer-events: none;
      width: 5px;
  }
+
+ .info {
+   bottom: 0;
+   right: 0;
+   cursor: pointer;
+   padding: 16px 16px;
+   opacity: .3;
+   z-index: 999;
+ }
+
+ .infoBody {
+   z-index: 1;
+   transition: transform .2s linear;
+ }
+
+ .scene {
+   transition: transform .2s linear;
+ }
+
+ .scene.on {
+   transform: rotateX(90deg);
+ }
+
+ .scene.off {
+   transform: rotateX(0deg);
+ }
+
+ .italic {
+   font-style: italic;
+ }

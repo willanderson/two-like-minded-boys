@@ -15,11 +15,14 @@ $(document).ready(function() {
   var reset = document.querySelector('#reset');
   var currentClass = '';
   var playing = false;
+  var paused = false
 
   function playVideos() {
     if (!playing) {
       vid1.play();
       vid2.play();
+      playing = true;
+      paused = false;
     }
   }
 
@@ -27,9 +30,35 @@ $(document).ready(function() {
     if (playing) {
       vid1.pause();
       vid2.pause();
+      paused = true;
+      playing = false;
     }
   }
 
+  function toggleVideos() {
+    if (playing) {
+      vid1.pause();
+      vid2.pause();
+    } else {
+      vid1.play();
+      vid2.play();
+    }
+  }
+
+
+// toggle menu
+
+
+$( "#infoSwitch" ).click(function() {
+  $("#videoHold").toggleClass('on');
+  $(".infoBody").toggleClass('flex');
+  $(this).text($(this).text() == 'Info' ? 'Close' : 'Info');
+  if (playing) {
+    stopVideos()
+  } else if (paused) {
+    playVideos()
+  }
+});
 
 
   function changeSideById(e) {
@@ -64,6 +93,9 @@ $(document).ready(function() {
     vid2.load();
   }
 
+ //  setTimeout(function() {
+ //     $("#infoSwitch").removeClass("dn");
+ // }, 30000);
 
 
 });
