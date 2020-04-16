@@ -92,6 +92,7 @@ $( "#infoSwitch" ).click(function() {
     $( "#cubeHold" ).removeClass( "show-jon show-seth" )
     vid1.load();
     vid2.load();
+    playing = false;
   }
 
  //  setTimeout(function() {
